@@ -25,7 +25,6 @@ export const auth = getAuth();
 export const signInWithGooglePopup = () => {
   return signInWithPopup(auth, googleProvider);
 };
-export const signInWithGoogleRedirect = () => signInWithRedirect(auth, googleProvider);
 
 export const db = getFirestore();
 
