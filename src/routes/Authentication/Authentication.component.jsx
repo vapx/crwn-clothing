@@ -6,14 +6,13 @@ import {
   checkUserLoggedIn,
 } from '../../utils/firebase/firebase.utils'
 import SignupForm from '../../components/sign-up-form/signup-form.component'
+import SigninForm from '../../components/sign-in-form/signin-form.component'
 
-const Signin = () => {
+
+
+const Authentication = () => {
   let navigate = useNavigate()
-  const logGoogleUser = async () => {
-    const { user } = await signInWithGooglePopup()
-    createUserDocumentFromAuth(user)
-    console.log(user)
-  }
+  
 
   useEffect(() => {
     checkUserLoggedIn()
@@ -27,11 +26,10 @@ const Signin = () => {
 
   return (
     <div>
-      <h1>Sign In Page</h1>
-      <button onClick={logGoogleUser}>Sign in with google</button>
       <SignupForm />
+      <SigninForm />
     </div>
   )
 }
 
-export default Signin
+export default Authentication
